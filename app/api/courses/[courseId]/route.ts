@@ -7,7 +7,7 @@ const {video} = new Mux({
     tokenId: process.env.MUX_TOKEN_ID,
     tokenSecret: process.env.MUX_TOKEN_SECRET
 })
-export const PATCH = async (req: NextResponse, {params}: {params: {courseId: string}}) => {
+export const PATCH = async (req: NextRequest, {params}: {params: {courseId: string}}) => {
     try{
         const {userId} = auth()
         const {courseId} = params
